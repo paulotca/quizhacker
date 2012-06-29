@@ -2,7 +2,10 @@ package com.quizhacker.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class Pessoa implements Serializable{
@@ -12,11 +15,14 @@ public class Pessoa implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	
+	@Id
+	@GeneratedValue
 	private long id;
 	
+	@Column
 	private String nome;
 	
+	@Column
 	private String cpf;
 
 	public long getId() {
